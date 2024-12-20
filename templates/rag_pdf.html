@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Query Result</title>
+</head>
+<body>
+
+    <h2>RAG Query Result</h2>
+    
+    <!-- Form for submitting a query -->
+    <form action="/rag_pdf" method="POST">
+        <label for="query">Enter your query:</label>
+        <input type="text" id="query" name="query" placeholder="What do you want to know from the PDF?" required>
+        
+        <br><br>
+        
+        <button type="submit">Submit Query</button>
+    </form>
+
+    <!-- Display the generated text if available -->
+    {% if generated_text %}
+        <h3>Generated Response:</h3>
+        <p>{{ generated_text }}</p>
+    {% endif %}
+
+</body>
+</html>

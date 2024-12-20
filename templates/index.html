@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF for RAG</title>
+</head>
+<body>
+
+    <h2>Upload PDF for RAG Query</h2>
+
+    <form id="pdfForm" action="/create_indexer" method="POST" enctype="multipart/form-data">
+        <!-- PDF File Upload -->
+        <label for="pdfFile">Choose a PDF file:</label>
+        <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required>
+        
+        <br><br>
+        
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
